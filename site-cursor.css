@@ -1,0 +1,20 @@
+@media (hover: hover) and (pointer: fine) {
+  html,
+  body,
+  body * {
+    cursor: url("./site-cursor.svg") 3 3, default !important;
+  }
+
+  a,
+  button,
+  [role="button"],
+  [tabindex] {
+    cursor: url("./site-cursor.svg") 3 3, pointer !important;
+  }
+
+  input,
+  textarea,
+  [contenteditable="true"] {
+    cursor: text !important;
+  }
+}
