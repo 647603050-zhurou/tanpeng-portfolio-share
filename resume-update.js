@@ -46,7 +46,7 @@ function updateResume() {
 
   const intro = document.querySelector(".v2-intro");
   if (intro) {
-    const updatedIntro = "以视觉语言连接品牌、内容与传播场景。近年聚焦体育赛事与数字内容，作品覆盖赛事主视觉、公众号、社媒及直播封面；项目经验亦延伸至品牌识别、包装、电商与商业海报。将 AI 融入创意探索与制作流程，兼顾信息清晰、视觉辨识度与最终落地。";
+    const updatedIntro = "拥有行业实践经验的视觉与品牌设计师，近年聚焦体育赛事与数字内容，也参与过品牌识别、包装、电商及商业海报项目。熟悉从主题视觉到公众号、社媒和直播封面的多场景设计，持续将AI纳入创作流程，并保持对细节与落地质量的判断。";
     if (intro.textContent !== updatedIntro) intro.textContent = updatedIntro;
   }
 }
