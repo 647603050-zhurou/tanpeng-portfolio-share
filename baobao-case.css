@@ -12,6 +12,14 @@
   transform-origin: center;
 }
 
+.baobao-case .v2-case-hero img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+
 .baobao-case .baobao-gallery {
   display: block;
   padding-top: 80px;
