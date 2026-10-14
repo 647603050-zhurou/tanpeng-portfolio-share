@@ -1,5 +1,5 @@
 // Extend the published V2 case without changing the compiled React application.
-const imageUrl = (file) => new URL(`./projects/${file}?v=20261014-3`, import.meta.url).href;
+const imageUrl = (file) => new URL(`./projects/${file}?v=20261015-bao5`, import.meta.url).href;
 
 const chapters = [
   {
@@ -7,8 +7,9 @@ const chapters = [
     title: "品牌定位与标志",
     intro: "以“超级烘焙屋”为品牌表达，将醒目的黄色、厚重的字标与面包角色组合起来，建立轻松、直接的视觉识别。",
     images: [
-      ["page-4.webp", "品牌概念", "围绕“吃鲍堡，没烦恼”的表达，确立明快、亲近的品牌基调。"],
-      ["page-8.webp", "标志与角色组合", "中文名称、英文标识与面包角色形成不同组合，适配横向、竖向及小尺寸应用。"],
+      ["baobao-02.webp", "品牌核心定位", "以“超级烘焙屋 / SUPER BAKE”明确品牌定位，用大字号 SUPER 与黄色建立直接的视觉记忆。"],
+      ["baobao-03.webp", "品牌核心广告语", "围绕“吃鲍堡，没烦恼 / EAT BAOBAO NO WORRIES”表达轻松、快乐的品牌态度，与面包角色共同形成传播语言。"],
+      ["page-8.webp", "标志与角色组合", "中文名称、英文标识与面包角色形成不同组合，适配横向、竖向及小尺寸应用。", true],
       ["baobao-4.webp", "品牌设计与灵感来源", "从黄色购物篮与面包产品中提取色彩和形态线索，将“丰富”与“烘焙”的概念融入品牌识别与面包角色。", true],
     ],
   },

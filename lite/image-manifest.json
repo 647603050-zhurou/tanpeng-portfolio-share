@@ -1,8 +1,8 @@
 {
   "version": "20261015-lite1",
-  "image_count": 80,
-  "original_image_bytes": 19767140,
-  "lite_image_bytes": 7826612,
+  "image_count": 83,
+  "original_image_bytes": 20117532,
+  "lite_image_bytes": 7972406,
   "image_bytes_reduction_percent": 60.4,
   "video_sha256": "9529d9334620e16ce520609fb2daf87f553b9823274fd0de6da8d358180c90a6",
   "images": [
@@ -304,6 +304,45 @@
       ],
       "original_bytes": 27278,
       "lite_bytes": 22930
+    },
+    {
+      "file": "projects/baobao-01.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 141536,
+      "lite_bytes": 58898
+    },
+    {
+      "file": "projects/baobao-02.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 104164,
+      "lite_bytes": 42792
+    },
+    {
+      "file": "projects/baobao-03.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 104692,
+      "lite_bytes": 44104
     },
     {
       "file": "projects/baobao-14.webp",
