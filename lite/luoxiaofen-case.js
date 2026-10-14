@@ -77,12 +77,12 @@ function makeChapter(chapter) {
     link.rel = "noopener";
     link.setAttribute("aria-label", `查看${label}大图（在新标签页打开）`);
     const image = document.createElement("img");
+    image.loading = "lazy";
+    image.decoding = "async";
     image.src = asset(file);
     image.alt = `螺小粉 · ${label}`;
     image.width = 2560;
     image.height = 1440;
-    image.loading = "lazy";
-    image.decoding = "async";
     link.append(image);
     const caption = document.createElement("figcaption");
     const captionTitle = document.createElement("strong");

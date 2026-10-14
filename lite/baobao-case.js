@@ -76,12 +76,12 @@ function makeChapter(chapter) {
     link.rel = "noopener";
     link.setAttribute("aria-label", `查看${label}大图（在新标签页打开）`);
     const image = document.createElement("img");
+    image.loading = "lazy";
+    image.decoding = "async";
     image.src = imageUrl(file);
     image.alt = `鲍堡芝 · ${label}`;
     image.width = width;
     image.height = height;
-    image.loading = "lazy";
-    image.decoding = "async";
     link.append(image);
     const caption = document.createElement("figcaption");
     const captionTitle = document.createElement("strong");

@@ -10,6 +10,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "lite"
 VERSION = "20261015-lite1"
+RUNTIME_VERSION = "20261015-load1"
 
 
 def digest(path):
@@ -41,7 +42,7 @@ def build():
     html = html.replace("作品集 V2。", "作品集 V2 轻量版。")
     html = html.replace("— V2</title>", "— V2 Lite</title>")
     html = re.sub(r'((?:src|href)="\./[^"?]+)(?:\?[^"\s]+)?"',
-                  lambda m: m[1] + "?v=" + VERSION + '"', html)
+                  lambda m: m[1] + "?v=" + RUNTIME_VERSION + '"', html)
     (DEST / "index.html").write_text(html, encoding="utf-8", newline="")
 
     sources = list(ROOT.glob("*.webp"))

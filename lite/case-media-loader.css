@@ -1,0 +1,17 @@
+/* Reserve the real image area while the first response is still arriving. */
+.v2-case-hero { position: relative; }
+.v2-case img.case-media-pending {
+  background: #151a13;
+  color: transparent;
+}
+.v2-case-hero.case-media-pending::after {
+  content: "图片载入中…";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #929d89;
+  font-size: 13px;
+  letter-spacing: .06em;
+  pointer-events: none;
+}

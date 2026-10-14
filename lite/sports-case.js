@@ -63,10 +63,10 @@ function makeGallery(group) {
   group.images.forEach(([name, caption]) => {
     const figure = document.createElement("figure");
     const image = document.createElement("img");
+    image.loading = "lazy";
+    image.decoding = "async";
     image.src = asset(name);
     image.alt = caption;
-    image.loading = "eager";
-    image.decoding = "sync";
     const media = document.createElement("div");
     media.className = "sports-media";
     media.append(image);
