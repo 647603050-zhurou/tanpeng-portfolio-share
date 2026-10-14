@@ -1,0 +1,121 @@
+/* Match the profile's green glow and gentle text movement in every case. */
+.v2-case-summary,
+.v2-case-thinking > article,
+.sports-case-intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: background-color .35s ease, box-shadow .35s ease;
+}
+
+.v2-case-summary::before,
+.sports-case-intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: radial-gradient(440px circle at var(--case-pointer-x, 55%) var(--case-pointer-y, 40%), #d7ff3621, #d7ff3609 34%, transparent 68%);
+  transition: opacity .35s ease;
+  pointer-events: none;
+}
+
+.v2-case-thinking > article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, #d7ff3621, #d7ff3609 62%, transparent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform .52s cubic-bezier(.2, .75, .2, 1);
+  pointer-events: none;
+}
+
+.v2-case-thinking > article::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 2px;
+  background: #d7ff36;
+  transform: scaleY(0);
+  transition: transform .38s ease;
+  pointer-events: none;
+}
+
+.v2-case-summary > p,
+.v2-case-summary > span,
+.v2-case-thinking > article > span,
+.v2-case-thinking > article > h3,
+.v2-case-thinking > article > p {
+  transition: color .35s ease, transform .5s cubic-bezier(.2, .75, .2, 1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .v2-case-summary:hover,
+  .sports-case-intro:hover {
+    background-color: #ffffff03;
+    box-shadow: inset 0 0 0 1px #d7ff362e;
+  }
+
+  .v2-case-thinking > article:hover {
+    background-color: #0e100d;
+    box-shadow: inset 0 0 0 1px #d7ff362e;
+  }
+
+  .v2-case-summary:hover::before,
+  .sports-case-intro:hover::before { opacity: 1; }
+
+  .v2-case-summary:hover > p {
+    color: #d7ff36;
+    transform: translateX(8px);
+  }
+
+  .v2-case-summary:hover > span {
+    color: #bfc5bd;
+    transform: translateX(4px);
+  }
+
+  .v2-case-thinking > article:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .v2-case-thinking > article:hover::after { transform: scaleY(1); }
+
+  .v2-case-thinking > article:hover > span,
+  .v2-case-thinking > article:hover > h3 {
+    color: #d7ff36;
+    transform: translateX(8px);
+  }
+
+  .v2-case-thinking > article:hover > p {
+    color: #bfc5bd;
+    transform: translateX(4px);
+  }
+
+  .sports-case-intro:hover { color: #d0d7cb; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v2-case-summary,
+  .v2-case-summary::before,
+  .v2-case-summary > p,
+  .v2-case-summary > span,
+  .v2-case-thinking > article,
+  .v2-case-thinking > article::before,
+  .v2-case-thinking > article::after,
+  .v2-case-thinking > article > span,
+  .v2-case-thinking > article > h3,
+  .v2-case-thinking > article > p,
+  .sports-case-intro,
+  .sports-case-intro::before { transition: none; }
+
+  .v2-case-summary:hover > p,
+  .v2-case-summary:hover > span,
+  .v2-case-thinking > article:hover > span,
+  .v2-case-thinking > article:hover > h3,
+  .v2-case-thinking > article:hover > p { transform: none; }
+}

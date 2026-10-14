@@ -1,0 +1,1050 @@
+{
+  "version": "20261015-lite1",
+  "image_count": 80,
+  "original_image_bytes": 19767140,
+  "lite_image_bytes": 7826612,
+  "image_bytes_reduction_percent": 60.4,
+  "video_sha256": "9529d9334620e16ce520609fb2daf87f553b9823274fd0de6da8d358180c90a6",
+  "images": [
+    {
+      "file": "hero-poster.webp",
+      "original_dimensions": [
+        1280,
+        720
+      ],
+      "lite_dimensions": [
+        1024,
+        576
+      ],
+      "original_bytes": 99804,
+      "lite_bytes": 74532
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-01.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 87070,
+      "lite_bytes": 32380
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-13.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 129496,
+      "lite_bytes": 45316
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-14.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 206386,
+      "lite_bytes": 68834
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-15.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 405152,
+      "lite_bytes": 133270
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-16.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 334308,
+      "lite_bytes": 118384
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-18.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 287618,
+      "lite_bytes": 72020
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-19.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 341068,
+      "lite_bytes": 91034
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-20.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 475374,
+      "lite_bytes": 127626
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-21.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 259968,
+      "lite_bytes": 74838
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-24.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 151144,
+      "lite_bytes": 44884
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-31.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 229538,
+      "lite_bytes": 50622
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-32.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 183828,
+      "lite_bytes": 51798
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-33.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 281540,
+      "lite_bytes": 36886
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-34.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 259144,
+      "lite_bytes": 78798
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-56.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 723408,
+      "lite_bytes": 178530
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-57.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 178168,
+      "lite_bytes": 62296
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-67.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 261602,
+      "lite_bytes": 74900
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-68.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 410038,
+      "lite_bytes": 113946
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-69.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 354598,
+      "lite_bytes": 96860
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-70.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 341636,
+      "lite_bytes": 87692
+    },
+    {
+      "file": "luoxiaofen/luoxiaofen-71.webp",
+      "original_dimensions": [
+        2559,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 417178,
+      "lite_bytes": 108098
+    },
+    {
+      "file": "portrait.webp",
+      "original_dimensions": [
+        900,
+        900
+      ],
+      "lite_dimensions": [
+        600,
+        600
+      ],
+      "original_bytes": 27278,
+      "lite_bytes": 22930
+    },
+    {
+      "file": "projects/baobao-14.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 258774,
+      "lite_bytes": 95768
+    },
+    {
+      "file": "projects/baobao-15.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 238986,
+      "lite_bytes": 92032
+    },
+    {
+      "file": "projects/baobao-16.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 300926,
+      "lite_bytes": 110184
+    },
+    {
+      "file": "projects/baobao-18.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 216448,
+      "lite_bytes": 63582
+    },
+    {
+      "file": "projects/baobao-19.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 402772,
+      "lite_bytes": 104034
+    },
+    {
+      "file": "projects/baobao-20.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 222118,
+      "lite_bytes": 65440
+    },
+    {
+      "file": "projects/baobao-4.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 291082,
+      "lite_bytes": 90372
+    },
+    {
+      "file": "projects/baobao-space-1.webp",
+      "original_dimensions": [
+        2560,
+        1441
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 235330,
+      "lite_bytes": 88364
+    },
+    {
+      "file": "projects/baobao-space-2.webp",
+      "original_dimensions": [
+        1440,
+        1800
+      ],
+      "lite_dimensions": [
+        1024,
+        1280
+      ],
+      "original_bytes": 169180,
+      "lite_bytes": 99806
+    },
+    {
+      "file": "projects/baobao-space-3.webp",
+      "original_dimensions": [
+        1440,
+        1800
+      ],
+      "lite_dimensions": [
+        1024,
+        1280
+      ],
+      "original_bytes": 176574,
+      "lite_bytes": 96742
+    },
+    {
+      "file": "projects/baobao-space-4.webp",
+      "original_dimensions": [
+        2560,
+        1441
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 277220,
+      "lite_bytes": 89532
+    },
+    {
+      "file": "projects/baobao-space-5.webp",
+      "original_dimensions": [
+        2560,
+        1441
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 440016,
+      "lite_bytes": 135486
+    },
+    {
+      "file": "projects/baobao-space-6.webp",
+      "original_dimensions": [
+        2560,
+        1441
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 411946,
+      "lite_bytes": 134898
+    },
+    {
+      "file": "projects/mozuofang-colors.webp",
+      "original_dimensions": [
+        2560,
+        1417
+      ],
+      "lite_dimensions": [
+        1280,
+        708
+      ],
+      "original_bytes": 315362,
+      "lite_bytes": 104884
+    },
+    {
+      "file": "projects/mozuofang-cup-sleeves.webp",
+      "original_dimensions": [
+        2044,
+        1145
+      ],
+      "lite_dimensions": [
+        1280,
+        717
+      ],
+      "original_bytes": 159776,
+      "lite_bytes": 56830
+    },
+    {
+      "file": "projects/mozuofang-keyvisual.webp",
+      "original_dimensions": [
+        2044,
+        1146
+      ],
+      "lite_dimensions": [
+        1280,
+        718
+      ],
+      "original_bytes": 171946,
+      "lite_bytes": 87662
+    },
+    {
+      "file": "projects/mozuofang-labels.webp",
+      "original_dimensions": [
+        2560,
+        1440
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 209370,
+      "lite_bytes": 69678
+    },
+    {
+      "file": "projects/mozuofang-logo-inspiration.webp",
+      "original_dimensions": [
+        2560,
+        1388
+      ],
+      "lite_dimensions": [
+        1280,
+        694
+      ],
+      "original_bytes": 226516,
+      "lite_bytes": 70770
+    },
+    {
+      "file": "projects/mozuofang-paper-cups.webp",
+      "original_dimensions": [
+        2045,
+        1145
+      ],
+      "lite_dimensions": [
+        1280,
+        717
+      ],
+      "original_bytes": 91084,
+      "lite_bytes": 40684
+    },
+    {
+      "file": "projects/mozuofang-posters.webp",
+      "original_dimensions": [
+        2041,
+        1148
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 486056,
+      "lite_bytes": 147322
+    },
+    {
+      "file": "projects/mozuofang-space-02.webp",
+      "original_dimensions": [
+        2500,
+        1406
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 400476,
+      "lite_bytes": 86610
+    },
+    {
+      "file": "projects/mozuofang-space-03.webp",
+      "original_dimensions": [
+        2500,
+        1406
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 439600,
+      "lite_bytes": 130644
+    },
+    {
+      "file": "projects/mozuofang-space-04.webp",
+      "original_dimensions": [
+        2500,
+        906
+      ],
+      "lite_dimensions": [
+        1280,
+        464
+      ],
+      "original_bytes": 373244,
+      "lite_bytes": 104470
+    },
+    {
+      "file": "projects/mozuofang-space-05.webp",
+      "original_dimensions": [
+        1440,
+        1800
+      ],
+      "lite_dimensions": [
+        1024,
+        1280
+      ],
+      "original_bytes": 330268,
+      "lite_bytes": 158492
+    },
+    {
+      "file": "projects/mozuofang-space-06.webp",
+      "original_dimensions": [
+        2500,
+        834
+      ],
+      "lite_dimensions": [
+        1280,
+        427
+      ],
+      "original_bytes": 311878,
+      "lite_bytes": 79760
+    },
+    {
+      "file": "projects/mozuofang-space-07.webp",
+      "original_dimensions": [
+        2500,
+        1406
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 478684,
+      "lite_bytes": 127514
+    },
+    {
+      "file": "projects/mozuofang-space-08.webp",
+      "original_dimensions": [
+        1440,
+        1800
+      ],
+      "lite_dimensions": [
+        1024,
+        1280
+      ],
+      "original_bytes": 294994,
+      "lite_bytes": 139386
+    },
+    {
+      "file": "projects/mozuofang-space-09.webp",
+      "original_dimensions": [
+        2500,
+        1406
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 475718,
+      "lite_bytes": 114770
+    },
+    {
+      "file": "projects/mozuofang-supporting-graphics.webp",
+      "original_dimensions": [
+        2042,
+        1149
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 157616,
+      "lite_bytes": 75948
+    },
+    {
+      "file": "projects/page-12.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 43414,
+      "lite_bytes": 47454
+    },
+    {
+      "file": "projects/page-14.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 51366,
+      "lite_bytes": 57598
+    },
+    {
+      "file": "projects/page-22.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 26006,
+      "lite_bytes": 31058
+    },
+    {
+      "file": "projects/page-26.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 41310,
+      "lite_bytes": 43650
+    },
+    {
+      "file": "projects/page-28.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 44146,
+      "lite_bytes": 51372
+    },
+    {
+      "file": "projects/page-36.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 33542,
+      "lite_bytes": 39814
+    },
+    {
+      "file": "projects/page-38.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 92938,
+      "lite_bytes": 105010
+    },
+    {
+      "file": "projects/page-4.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 23828,
+      "lite_bytes": 27168
+    },
+    {
+      "file": "projects/page-40.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 88872,
+      "lite_bytes": 100158
+    },
+    {
+      "file": "projects/page-42.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 71660,
+      "lite_bytes": 81564
+    },
+    {
+      "file": "projects/page-44.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 84902,
+      "lite_bytes": 94360
+    },
+    {
+      "file": "projects/page-8.webp",
+      "original_dimensions": [
+        1600,
+        900
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 57320,
+      "lite_bytes": 59742
+    },
+    {
+      "file": "sports/champion-spain.webp",
+      "original_dimensions": [
+        1625,
+        2400
+      ],
+      "lite_dimensions": [
+        867,
+        1280
+      ],
+      "original_bytes": 716036,
+      "lite_bytes": 312712
+    },
+    {
+      "file": "sports/cover.webp",
+      "original_dimensions": [
+        1800,
+        1013
+      ],
+      "lite_dimensions": [
+        1280,
+        720
+      ],
+      "original_bytes": 276870,
+      "lite_bytes": 189450
+    },
+    {
+      "file": "sports/euroleague-banner.webp",
+      "original_dimensions": [
+        1053,
+        408
+      ],
+      "lite_dimensions": [
+        842,
+        326
+      ],
+      "original_bytes": 91800,
+      "lite_bytes": 70740
+    },
+    {
+      "file": "sports/fast-preview.webp",
+      "original_dimensions": [
+        960,
+        540
+      ],
+      "lite_dimensions": [
+        768,
+        432
+      ],
+      "original_bytes": 99794,
+      "lite_bytes": 74794
+    },
+    {
+      "file": "sports/final-day.webp",
+      "original_dimensions": [
+        1080,
+        1920
+      ],
+      "lite_dimensions": [
+        720,
+        1280
+      ],
+      "original_bytes": 285222,
+      "lite_bytes": 167578
+    },
+    {
+      "file": "sports/host-dongni.webp",
+      "original_dimensions": [
+        960,
+        540
+      ],
+      "lite_dimensions": [
+        768,
+        432
+      ],
+      "original_bytes": 58048,
+      "lite_bytes": 43496
+    },
+    {
+      "file": "sports/host-xiaoyu.webp",
+      "original_dimensions": [
+        960,
+        540
+      ],
+      "lite_dimensions": [
+        768,
+        432
+      ],
+      "original_bytes": 76162,
+      "lite_bytes": 59788
+    },
+    {
+      "file": "sports/host-xiatian.webp",
+      "original_dimensions": [
+        960,
+        540
+      ],
+      "lite_dimensions": [
+        768,
+        432
+      ],
+      "original_bytes": 86984,
+      "lite_bytes": 69088
+    },
+    {
+      "file": "sports/league-keyvisual.webp",
+      "original_dimensions": [
+        1000,
+        1000
+      ],
+      "lite_dimensions": [
+        800,
+        800
+      ],
+      "original_bytes": 176532,
+      "lite_bytes": 132464
+    },
+    {
+      "file": "sports/live-medusa.webp",
+      "original_dimensions": [
+        960,
+        540
+      ],
+      "lite_dimensions": [
+        768,
+        432
+      ],
+      "original_bytes": 108744,
+      "lite_bytes": 85134
+    },
+    {
+      "file": "sports/mls-keyvisual.webp",
+      "original_dimensions": [
+        1000,
+        1000
+      ],
+      "lite_dimensions": [
+        800,
+        800
+      ],
+      "original_bytes": 247508,
+      "lite_bytes": 184322
+    },
+    {
+      "file": "sports/new-season.webp",
+      "original_dimensions": [
+        1800,
+        2400
+      ],
+      "lite_dimensions": [
+        960,
+        1280
+      ],
+      "original_bytes": 313142,
+      "lite_bytes": 164510
+    },
+    {
+      "file": "sports/schedule-bundesliga.webp",
+      "original_dimensions": [
+        1800,
+        2400
+      ],
+      "lite_dimensions": [
+        960,
+        1280
+      ],
+      "original_bytes": 494722,
+      "lite_bytes": 232306
+    },
+    {
+      "file": "sports/schedule-laliga.webp",
+      "original_dimensions": [
+        1800,
+        2400
+      ],
+      "lite_dimensions": [
+        960,
+        1280
+      ],
+      "original_bytes": 336254,
+      "lite_bytes": 161520
+    },
+    {
+      "file": "sports/schedule-premier.webp",
+      "original_dimensions": [
+        1800,
+        2400
+      ],
+      "lite_dimensions": [
+        960,
+        1280
+      ],
+      "original_bytes": 443424,
+      "lite_bytes": 211074
+    },
+    {
+      "file": "sports/season-finale.webp",
+      "original_dimensions": [
+        900,
+        1200
+      ],
+      "lite_dimensions": [
+        720,
+        960
+      ],
+      "original_bytes": 287290,
+      "lite_bytes": 220550
+    }
+  ]
+}
