@@ -10,7 +10,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 DEST = ROOT / "lite"
 VERSION = "20261015-lite1"
-RUNTIME_VERSION = "20261015-load1"
+RUNTIME_VERSION = "20261015-wx1"
 
 
 def digest(path):

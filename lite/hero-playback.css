@@ -1,0 +1,25 @@
+.hero-playback-button {
+  position: absolute;
+  right: max(8%, calc((100% - 1900px) / 2));
+  bottom: 120px;
+  z-index: 3;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #d7ff3647;
+  border-radius: 24px;
+  background: #070807b8;
+  color: #cbd2bf;
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: .5px;
+  cursor: pointer;
+}
+.hero-playback-button[hidden] { display: none; }
+.hero-playback-button::before { content: "▶"; color: #d7ff36; margin-right: 8px; }
+.hero-playback-button:focus-visible { outline: 1px solid #d7ff36; outline-offset: 4px; }
+@media (max-width: 1000px) {
+  .hero-playback-button { right: 5%; }
+}
+@media (max-width: 600px) {
+  .hero-playback-button { right: 19px; bottom: 112px; }
+}
