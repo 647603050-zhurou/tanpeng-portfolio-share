@@ -1,0 +1,82 @@
+/* Shared close-button treatment for every V2 project dialog. */
+.v2-case > header button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 142px;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid rgba(215, 255, 54, .6);
+  border-radius: 999px;
+  background: rgba(215, 255, 54, .09);
+  color: #f4f5f1;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: .08em;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color .22s ease, border-color .22s ease,
+    color .22s ease, box-shadow .22s ease, transform .22s ease;
+}
+
+.v2-case > header button::before {
+  content: "关闭";
+  letter-spacing: 0;
+}
+
+.v2-case > header button b {
+  display: inline-block;
+  margin-left: 0;
+  color: #d7ff36;
+  font-size: 24px;
+  line-height: 1;
+  transition: color .22s ease, transform .3s ease;
+}
+
+.v2-case > header button:focus-visible {
+  border-color: #d7ff36;
+  background: #d7ff36;
+  color: #070807;
+  outline: 2px solid #d7ff36;
+  outline-offset: 4px;
+  box-shadow: 0 0 24px rgba(215, 255, 54, .2);
+}
+
+.v2-case > header button:focus-visible b {
+  color: #070807;
+  transform: rotate(90deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .v2-case > header button:hover {
+    border-color: #d7ff36;
+    background: #d7ff36;
+    color: #070807;
+    box-shadow: 0 8px 26px rgba(215, 255, 54, .2);
+    transform: translateY(-2px);
+  }
+
+  .v2-case > header button:hover b {
+    color: #070807;
+    transform: rotate(90deg);
+  }
+}
+
+.v2-case > header button:active {
+  transform: translateY(0) scale(.97);
+}
+
+@media (max-width: 700px) {
+  .v2-case > header { padding-inline: 19px; }
+  .v2-case > header button { min-width: 136px; padding-inline: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v2-case > header button,
+  .v2-case > header button b { transition: none; }
+  .v2-case > header button:hover,
+  .v2-case > header button:active,
+  .v2-case > header button:focus-visible b,
+  .v2-case > header button:hover b { transform: none; }
+}

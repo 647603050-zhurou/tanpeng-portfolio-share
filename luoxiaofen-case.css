@@ -1,0 +1,103 @@
+.luoxiaofen-case .luoxiaofen-gallery {
+  display: block;
+  padding-top: 80px;
+}
+
+.luoxiaofen-chapter + .luoxiaofen-chapter {
+  margin-top: 90px;
+}
+
+.luoxiaofen-chapter-heading {
+  display: grid;
+  grid-template-columns: 130px 1fr minmax(260px, 390px);
+  align-items: end;
+  gap: 28px;
+  padding: 38px 0;
+  border-top: 1px solid var(--v2-line);
+}
+
+.luoxiaofen-chapter-heading > span {
+  color: #c6a06b;
+  font-size: 11px;
+  letter-spacing: .12em;
+}
+
+.luoxiaofen-chapter-heading h3 {
+  margin: 0;
+  font-size: clamp(28px, 3.5vw, 54px);
+  font-weight: 500;
+  letter-spacing: -.05em;
+  line-height: 1.2;
+}
+
+.luoxiaofen-chapter-heading > p {
+  margin: 0;
+  color: #a5ada4;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.luoxiaofen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 44px 30px;
+}
+
+.luoxiaofen-image-link {
+  display: block;
+  background: #fff;
+}
+
+.luoxiaofen-case .luoxiaofen-grid > figure.wide {
+  grid-column: 1 / -1;
+}
+
+.luoxiaofen-image-link:focus-visible {
+  outline: 2px solid #c6a06b;
+  outline-offset: 5px;
+}
+
+.luoxiaofen-case .luoxiaofen-grid img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  background: #fff;
+}
+
+.luoxiaofen-case .luoxiaofen-grid figcaption {
+  padding-top: 16px;
+  color: #c4cac3;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.8;
+}
+
+.luoxiaofen-grid figcaption strong {
+  font-weight: 500;
+}
+
+.luoxiaofen-grid figcaption p {
+  margin: 5px 0 0;
+  color: #a5ada4;
+  font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  .luoxiaofen-chapter-heading {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .luoxiaofen-case .luoxiaofen-gallery { padding-top: 52px; }
+  .luoxiaofen-chapter + .luoxiaofen-chapter { margin-top: 60px; }
+  .luoxiaofen-chapter-heading { padding: 28px 0; }
+  .luoxiaofen-grid { grid-template-columns: 1fr; gap: 32px; }
+  .luoxiaofen-case .luoxiaofen-grid figure.wide { grid-column: 1 / -1; }
+}
+
+.luoxiaofen-project-card .v2-project-image img { object-position: center; }
+.luoxiaofen-close:focus-visible { outline: 2px solid #c6a06b; outline-offset: 5px; }

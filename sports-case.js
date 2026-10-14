@@ -125,7 +125,7 @@ function openCase() {
   modal.setAttribute("aria-modal", "true");
   modal.setAttribute("aria-labelledby", "sports-case-title");
   modal.innerHTML = `
-    <header><span>CASE / 04</span><button type="button" class="sports-close">CLOSE <b aria-hidden="true">×</b></button></header>
+    <header><span>CASE / 05</span><button type="button" class="sports-close">CLOSE <b aria-hidden="true">×</b></button></header>
     <div class="v2-case-shell">
       <div class="v2-case-title" style="--case-accent:#e84930">
         <p>SPORTS CAMPAIGN · LIVE CONTENT · 2025—2026</p>
@@ -138,7 +138,7 @@ function openCase() {
       </section>
       <div class="sports-case-intro">围绕足球、篮球赛事及直播内容，作品覆盖赛季开幕、赛前预告、比赛结果、赛程整理与解说栏目。以下按传播场景选录，展示从主题海报到高频信息图与直播封面的不同表达。</div>
       <div class="sports-case-groups"></div>
-      <p class="sports-endnote">END OF CASE / 04</p>
+      <p class="sports-endnote">END OF CASE / 05</p>
     </div>`;
   modal.querySelector(".sports-close").addEventListener("click", closeCase);
   const container = modal.querySelector(".sports-case-groups");
@@ -158,7 +158,7 @@ function addCard() {
   card.style.setProperty("--project-accent", "#e84930");
   card.innerHTML = `
     <button type="button" aria-label="打开体育赛事与直播视觉项目详情">
-      <div class="v2-project-meta"><span>04</span><p>SPORTS CAMPAIGN · LIVE CONTENT</p><time>2025—2026</time></div>
+      <div class="v2-project-meta"><span>05</span><p>SPORTS CAMPAIGN · LIVE CONTENT</p><time>2025—2026</time></div>
       <div class="v2-project-image"><img src="${asset("cover")}" alt="体育赛事与直播视觉项目展示" loading="lazy" decoding="async"><span>OPEN CASE ↗</span></div>
       <div class="v2-project-name"><h3>体育赛事与直播视觉</h3><p>SPORTS & LIVE VISUALS</p></div>
     </button>`;
