@@ -1,6 +1,7 @@
 .v2-project-card > button[aria-label="打开鲍堡芝项目详情"] .v2-project-image {
   height: auto;
   aspect-ratio: 16 / 9;
+  overflow: visible;
 }
 
 .v2-project-card > button[aria-label="打开鲍堡芝项目详情"] .v2-project-image img {
@@ -8,7 +9,7 @@
   height: auto;
   object-fit: contain;
   object-position: center;
-  transform: none;
+  transform-origin: center;
 }
 
 .baobao-case .baobao-gallery {
