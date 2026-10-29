@@ -70,7 +70,7 @@ function makeGallery(group) {
     const image = document.createElement("img");
     image.loading = "lazy";
     image.decoding = "async";
-    image.src = asset(name);
+    image.dataset.caseSrc = asset(name);
     image.alt = caption;
     const media = document.createElement("div");
     media.className = "sports-media";

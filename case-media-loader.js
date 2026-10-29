@@ -12,6 +12,7 @@ const jobs = [];
 let active = 0;
 
 function pump() {
+  if (document.querySelector(".v2-case")) return;
   while (active < 2 && jobs.length) {
     const job = jobs.shift();
     active++;
@@ -58,6 +59,9 @@ function warm(path, urgent) {
 const registeredCards = new WeakSet();
 const intentCards = new WeakSet();
 function warmCard(button, urgent = false) {
+  // Touch browsers synthesize hover/focus while tapping: never start speculative
+  // downloads there, or behind an open case, ahead of the requested hero.
+  if (window.matchMedia("(hover: none), (pointer: coarse)").matches || document.querySelector(".v2-case")) return;
   const assets = profiles[button?.getAttribute("aria-label")];
   if (!assets) return;
   if (urgent && intentCards.has(button)) return;
@@ -88,51 +92,153 @@ for (const event of ["pointerover", "pointerdown", "focusin", "click"]) {
   }, { capture: true, passive: true });
 }
 
-const trackedImages = new WeakSet();
+const mobileAssetRoot = new URL("./mobile/", import.meta.url);
+function mobileImageUrl(raw) {
+  if (!raw || !window.matchMedia("(max-width: 700px)").matches) return raw;
+  const url = new URL(raw, document.baseURI);
+  if (url.origin !== location.origin || url.pathname.includes("/mobile/")) return raw;
+  const match = url.pathname.match(/\/(projects|luoxiaofen)\/([^/]+\.webp)$/);
+  return match ? new URL(match[1] + "/" + match[2], mobileAssetRoot).href : raw;
+}
+
+const trackedImages = new Map();
+const galleries = new Map();
 let pausedHero = null;
+
+function trackImage(image, modal, observer) {
+  const hero = image.closest(".v2-case-hero");
+  const host = hero || image.closest("a, .sports-media") || image.parentElement;
+  const deferred = image.dataset.caseSrc;
+  const displayUrl = mobileImageUrl(deferred || image.src);
+  const file = new URL(deferred || image.src, document.baseURI).pathname.split("/").pop().split(".")[0];
+  const size = dimensions[file];
+  if (size) { image.width = size[0]; image.height = size[1]; }
+  image.decoding = "async";
+  image.fetchPriority = hero ? "high" : "low";
+  let timer = null;
+  let retryButton = null;
+  let started = false;
+
+  function clearPending() {
+    clearTimeout(timer);
+    image.classList.remove("case-media-pending");
+    if (hero) hero.classList.remove("case-media-pending");
+  }
+  function loaded() {
+    if (!image.naturalWidth) return;
+    clearPending();
+    retryButton?.remove();
+    retryButton = null;
+    image.dataset.caseLoadState = "loaded";
+  }
+  function failed() {
+    clearPending();
+    image.dataset.caseLoadState = "retry";
+    if (retryButton || !image.isConnected) return;
+    retryButton = document.createElement("button");
+    retryButton.type = "button";
+    retryButton.className = "case-media-retry";
+    retryButton.textContent = "图片暂未载入，点击重试";
+    retryButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      retryButton.remove();
+      retryButton = null;
+      const url = new URL(image.currentSrc || image.src || deferred, document.baseURI);
+      url.searchParams.set("retry", String(Date.now()));
+      begin();
+      // A picture source takes precedence over img.src.
+      const picture = image.closest("picture");
+      if (picture) {
+        for (const source of picture.querySelectorAll("source")) {
+          const sourceUrl = new URL(source.srcset, document.baseURI);
+          sourceUrl.searchParams.set("retry", String(Date.now()));
+          source.srcset = sourceUrl.href;
+        }
+      }
+      image.src = url.href;
+    });
+    host.classList.add("case-media-host");
+    host.append(retryButton);
+  }
+  function begin() {
+    started = true;
+    clearTimeout(timer);
+    image.dataset.caseLoadState = "loading";
+    image.classList.add("case-media-pending");
+    if (hero) hero.classList.add("case-media-pending");
+    timer = setTimeout(failed, 12000);
+  }
+  image.addEventListener("load", loaded);
+  image.addEventListener("error", failed);
+  trackedImages.set(image, {
+    start() {
+      if (started) return;
+      begin();
+      image.loading = "eager";
+      if (deferred || displayUrl !== image.src) image.src = displayUrl;
+      // Handle a cached completion/error that happened before listeners attached.
+      if (image.complete) {
+        if (image.naturalWidth) loaded();
+        else if (image.getAttribute("src")) failed();
+      }
+    },
+    cleanup() {
+      clearTimeout(timer);
+      image.removeEventListener("load", loaded);
+      image.removeEventListener("error", failed);
+    },
+  });
+  if (deferred && !hero) observer.observe(image);
+  else trackedImages.get(image).start();
+}
+
 function scan() {
+  for (const [image, state] of trackedImages) {
+    if (image.isConnected) continue;
+    state.cleanup();
+    trackedImages.delete(image);
+  }
+  for (const [modal, observer] of galleries) {
+    if (modal.isConnected) continue;
+    observer.disconnect();
+    galleries.delete(modal);
+  }
   for (const card of document.querySelectorAll(".v2-project-card")) {
+    for (const image of card.querySelectorAll("img")) {
+      const displayUrl = mobileImageUrl(image.src);
+      if (displayUrl && displayUrl !== image.src) image.src = displayUrl;
+    }
     if (registeredCards.has(card)) continue;
     registeredCards.add(card);
     cardObserver.observe(card);
   }
-  const modal = document.querySelector(".v2-case");
+  const modals = [...document.querySelectorAll(".v2-case")];
   const video = document.querySelector("video.v2-hero-video");
-  // Do not spend mobile decoding/rendering time on a video behind an opaque dialog.
-  if (modal && video && !video.paused && !pausedHero) {
+  if (modals.length && video && !video.paused && !pausedHero) {
     pausedHero = video;
     video.pause();
-  } else if (!modal && pausedHero) {
+  } else if (!modals.length && pausedHero) {
     const resume = pausedHero;
     pausedHero = null;
     resume.play().catch(() => {});
   }
-  if (!modal) return;
-  for (const image of modal.querySelectorAll("img")) {
-    if (trackedImages.has(image)) continue;
-    trackedImages.add(image);
-    const file = new URL(image.src, document.baseURI).pathname.split("/").pop().split(".")[0];
-    const size = dimensions[file];
-    if (size) {
-      image.width = size[0];
-      image.height = size[1];
+  for (const modal of modals) {
+    if (!galleries.has(modal)) {
+      const observer = new IntersectionObserver((entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+          observer.unobserve(entry.target);
+          trackedImages.get(entry.target)?.start();
+        }
+      }, { root: modal, rootMargin: "180px 0px", threshold: 0.01 });
+      galleries.set(modal, observer);
     }
-    const hero = image.closest(".v2-case-hero");
-    image.decoding = "async";
-    image.loading = hero ? "eager" : "lazy";
-    image.fetchPriority = hero ? "high" : "low";
-    if (image.complete && image.naturalWidth) continue;
-    image.classList.add("case-media-pending");
-    if (hero) hero.classList.add("case-media-pending");
-    const finish = () => {
-      image.classList.remove("case-media-pending");
-      if (hero) hero.classList.remove("case-media-pending");
-      image.removeEventListener("load", finish);
-      image.removeEventListener("error", finish);
-    };
-    image.addEventListener("load", finish);
-    image.addEventListener("error", finish);
+    for (const image of modal.querySelectorAll("img")) {
+      if (!trackedImages.has(image)) trackImage(image, modal, galleries.get(modal));
+    }
   }
+  if (!modals.length) pump();
 }
 
 new MutationObserver(scan).observe(document.body, { childList: true, subtree: true });

@@ -1,4 +1,20 @@
 /* Reserve the real image area while the first response is still arriving. */
+.case-media-host { position: relative; }
+.case-media-retry {
+  position: absolute;
+  z-index: 2;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  padding: 12px 18px;
+  border: 1px solid #76846b;
+  border-radius: 6px;
+  background: #151a13ee;
+  color: #f3f5ef;
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
 .v2-case-hero { position: relative; }
 .v2-case img.case-media-pending {
   background: #151a13;

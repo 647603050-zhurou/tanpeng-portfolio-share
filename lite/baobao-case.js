@@ -79,7 +79,7 @@ function makeChapter(chapter) {
     const image = document.createElement("img");
     image.loading = "lazy";
     image.decoding = "async";
-    image.src = imageUrl(file);
+    image.dataset.caseSrc = imageUrl(file);
     image.alt = `鲍堡芝 · ${label}`;
     image.width = width;
     image.height = height;

@@ -79,7 +79,7 @@ function makeChapter(chapter) {
     const image = document.createElement("img");
     image.loading = "lazy";
     image.decoding = "async";
-    image.src = asset(file);
+    image.dataset.caseSrc = asset(file);
     image.alt = `螺小粉 · ${label}`;
     image.width = 2560;
     image.height = 1440;
