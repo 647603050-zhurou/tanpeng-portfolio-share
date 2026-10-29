@@ -1,5 +1,10 @@
 const asset = (name) => new URL(`./sports/${name}.webp?v=20261015-lite1`, import.meta.url).href;
 
+// Keep the card and dialog on the same responsive URL so they share one download.
+function coverImage(attributes) {
+  return `<picture><source media="(max-width: 620px)" srcset="${asset("cover-mobile")}"><img src="${asset("cover-display")}" width="1280" height="720" ${attributes}></picture>`;
+}
+
 const groups = [
   {
     number: "01",
@@ -131,7 +136,7 @@ function openCase() {
         <p>SPORTS CAMPAIGN · LIVE CONTENT · 2025—2026</p>
         <h2 id="sports-case-title">体育赛事<br>与直播视觉<small>SPORTS & LIVE VISUALS</small></h2>
       </div>
-      <figure class="v2-case-hero"><img src="${asset("cover")}" alt="极速播报足球赛事主视觉"></figure>
+      <figure class="v2-case-hero">${coverImage('alt="极速播报足球赛事主视觉" decoding="async" fetchpriority="high"')}</figure>
       <section class="v2-case-summary sports-summary">
         <p>让赛事信息更快被看见，让每一个比赛节点都有自己的视觉记忆。</p>
         <span>足球 · 篮球 / 赛事主视觉 · 赛程信息 · 直播内容<br>作品精选 / 2025—2026</span>
@@ -159,7 +164,7 @@ function addCard() {
   card.innerHTML = `
     <button type="button" aria-label="打开体育赛事与直播视觉项目详情">
       <div class="v2-project-meta"><span>05</span><p>SPORTS CAMPAIGN · LIVE CONTENT</p><time>2025—2026</time></div>
-      <div class="v2-project-image"><img src="${asset("cover")}" alt="体育赛事与直播视觉项目展示" loading="lazy" decoding="async"><span>OPEN CASE ↗</span></div>
+      <div class="v2-project-image">${coverImage('alt="体育赛事与直播视觉项目展示" loading="lazy" decoding="async"')}<span>OPEN CASE ↗</span></div>
       <div class="v2-project-name"><h3>体育赛事与直播视觉</h3><p>SPORTS & LIVE VISUALS</p></div>
     </button>`;
   card.querySelector("button").addEventListener("click", openCase);

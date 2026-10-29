@@ -1,4 +1,6 @@
 .sports-project-card .v2-project-image img { object-position: center; }
+.sports-project-card .v2-project-image picture { display: block; width: 100%; height: 100%; }
+.sports-case-modal .v2-case-hero picture { display: block; width: 100%; }
 .sports-project-card .v2-project-name { gap: 24px; }
 .sports-project-card .v2-project-name h3 { font-size: clamp(30px, 4.5vw, 72px); }
 .sports-case-modal .v2-case-title h2 { font-size: clamp(50px, 8vw, 126px); line-height: 1.02; }
